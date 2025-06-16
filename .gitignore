@@ -1,0 +1,26 @@
+# VS Code Extension files
+*.vsix
+out/
+node_modules/
+
+# Compiled files
+*.js.map
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/settings.json
+.idea/
+
+# Test files (optional - you might want to keep these)
+# test-*.clj
+# example-*.clj
+
+# clj-kondo binary (large file)
+bin/clj-kondo
+
+# Log files
+*.log
+npm-debug.log*

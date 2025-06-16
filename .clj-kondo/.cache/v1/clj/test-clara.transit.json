@@ -1,0 +1,1 @@
+["^ ","~$sample-rule",["^ ","~:row",7,"~:col",1,"~:fixed-arities",["~#set",[2]],"~:name","^0","~:ns","~$test-clara","~:top-ns","^7","~:type","~:fn"],"~$another-rule",["^ ","^1",21,"^2",1,"^3",["^4",[2]],"^5","^;","^6","^7","^8","^7","^9","^:"],"~:filename","/home/joeyc/projects/clara_highlighting/test-clara.clj"]

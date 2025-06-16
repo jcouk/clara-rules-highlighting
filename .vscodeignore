@@ -1,0 +1,15 @@
+.vscode/**
+.vscode-test/**
+out/test/**
+out/**/*.map
+.gitignore
+.git/**
+node_modules/**
+src/**
+test-extension.sh
+**/*.ts
+**/tsconfig.json
+**/.eslintrc.json
+**/*.map
+.clj-kondo/config.edn
+install-clj-kondo

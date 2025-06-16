@@ -1,0 +1,12 @@
+{:lint-as {clara.rules/defrule {:ns clojure.core
+                               :name def}
+           clara-eav.rules/defrule {:ns clojure.core
+                                   :name def}
+           clara.rules/defquery {:ns clojure.core
+                                :name def}
+           clara-eav.rules/defquery {:ns clojure.core
+                                    :name def}}
+ :linters {:unresolved-symbol {:exclude-patterns ["\\?.*"]
+                               :exclude #{:eav/all :rhs/parentLinkingAttributeName :objectMatch/rhsEid <- -> => this _ acc/count
+                                         generate-similar-rhs-objects generate-missing-rhs-objects count-number-of-similar-objects}}
+           :syntax {:exclude #{:unsupported-binding-form}}}}

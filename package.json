@@ -1,0 +1,112 @@
+{
+  "name": "clara-highlighting",
+  "displayName": "Clara Rules Variable Highlighting",
+  "description": "Highlights Clojure logic variables (starting with ?) with distinct colors within their form scope",
+  "version": "0.1.0",
+  "publisher": "joeyc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joeyc/clara-highlighting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joeyc/clara-highlighting/issues"
+  },
+  "homepage": "https://github.com/joeyc/clara-highlighting#readme",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "clojure",
+    "clara-rules",
+    "syntax-highlighting",
+    "logic-programming",
+    "variables",
+    "clj-kondo"
+  ],
+  "activationEvents": [
+    "onLanguage:clojure"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "claraHighlighting.debug",
+        "title": "Debug Clara Highlighting"
+      },
+      {
+        "command": "claraHighlighting.test",
+        "title": "Test Clara Decoration"
+      },
+      {
+        "command": "claraHighlighting.addIgnoreComments",
+        "title": "Add clj-kondo Ignore Comments to Defrules"
+      },
+      {
+        "command": "claraHighlighting.removeIgnoreComments",
+        "title": "Remove clj-kondo Ignore Comments from Defrules"
+      },
+      {
+        "command": "claraHighlighting.setupCljKondo",
+        "title": "Setup clj-kondo Config for Clara Rules"
+      }
+    ],
+    "languages": [
+      {
+        "id": "clojure",
+        "extensions": [
+          ".clj",
+          ".cljs",
+          ".cljc"
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "Clara Highlighting",
+      "properties": {
+        "claraHighlighting.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Clara Rules variable highlighting"
+        },
+        "claraHighlighting.colors": {
+          "type": "array",
+          "default": [
+            "#2E86C1",
+            "#28B463", 
+            "#F39C12",
+            "#8E44AD",
+            "#E67E22",
+            "#16A085",
+            "#C0392B",
+            "#D68910",
+            "#7D3C98",
+            "#138D75",
+            "#B7950B",
+            "#A93226"
+          ],
+          "description": "Colors to cycle through for highlighting variables"
+        },
+        "claraHighlighting.autoAddIgnoreComments": {
+          "type": "string",
+          "enum": ["disabled", "onSave", "onType"],
+          "default": "disabled",
+          "description": "When to automatically add clj-kondo ignore comments: disabled, onSave (when saving file), or onType (as you type defrules)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.126",
+    "@types/vscode": "^1.101.0",
+    "typescript": "^4.9.5"
+  }
+}
