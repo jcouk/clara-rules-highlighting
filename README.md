@@ -9,7 +9,7 @@ A VS Code extension that provides syntax highlighting for Clara Rules logic vari
 - **Font Color Highlighting**: Changes the font color rather than background highlighting for better readability
 - **clj-kondo Integration**: Automatically add/remove `#_{:clj-kondo/ignore [:unresolved-symbol]}` comments for defrule definitions
 - **Configurable Colors**: Customize the color palette used for highlighting
-- **Clojure Support**: Works with `.clj`, `.cljs`, `.cljc`, and `.edn` files
+- **Clojure Support**: Works with `.clj`, `.cljs`, and `.cljc` files
 
 ## How It Works
 
@@ -89,6 +89,8 @@ If you prefer using ignore comments, you can set:
 - **Remove clj-kondo Ignore Comments from Defrules**: `Ctrl+Shift+P` → "Remove clj-kondo Ignore Comments from Defrules"
 - **Debug Clara Highlighting**: `Ctrl+Shift+P` → "Debug Clara Highlighting" (for troubleshooting)
 
+## Screenshots
+
 ## Installation
 
 1. Open VS Code
@@ -108,7 +110,7 @@ To work on this extension:
 ## Requirements
 
 - VS Code 1.74.0 or higher
-- Clojure files (`.clj`, `.cljs`, `.cljc`, `.edn`)
+- Clojure files (`.clj`, `.cljs`, `.cljc`)
 
 ## Release Notes
 

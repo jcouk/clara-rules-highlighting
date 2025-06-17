@@ -6,7 +6,6 @@
                                 :name def}
            clara-eav.rules/defquery {:ns clojure.core
                                     :name def}}
- :linters {:unresolved-symbol {:exclude-patterns ["\\?.*"]
-                               :exclude #{:eav/all :rhs/parentLinkingAttributeName :objectMatch/rhsEid <- -> => this _ acc/count
-                                         generate-similar-rhs-objects generate-missing-rhs-objects count-number-of-similar-objects}}
+ :linters {:unresolved-symbol {:exclude-patterns ["\\?.*" "^[a-zA-Z][a-zA-Z0-9-_*+!?]*[a-zA-Z0-9]$"]
+                               :exclude #{:eav/all  <- -> => this _ acc/count}}
            :syntax {:exclude #{:unsupported-binding-form}}}}

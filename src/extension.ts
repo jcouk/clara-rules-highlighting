@@ -473,14 +473,14 @@ export function activate(context: vscode.ExtensionContext) {
                                 :name def}
            clara-eav.rules/defquery {:ns clojure.core
                                     :name def}}
- :linters {:unresolved-symbol {:exclude-patterns ["\\\\?.*"]
+ :linters {:unresolved-symbol {:exclude-patterns ["\\\\?.*" "^[a-z][a-z0-9-]*[a-z0-9]$"]
                                :exclude #{:eav/all <- -> => this _ acc/count}}
            :syntax {:exclude #{:unsupported-binding-form}}}}`;
 
     try {
       fs.writeFileSync(configPath, config);
       vscode.window.showInformationMessage(
-        `Created clj-kondo config at ${configPath}. This will eliminate unresolved symbol warnings for logic variables (?vars), Clara operators (<-, ->, =>, this), and binding form warnings!`,
+        `Created clj-kondo config at ${configPath}. This will eliminate unresolved symbol warnings for logic variables (?vars), rule names (kebab-case), Clara operators (<-, ->, =>, this), and binding form warnings!`,
         'Open Config'
       ).then(selection => {
         if (selection === 'Open Config') {
